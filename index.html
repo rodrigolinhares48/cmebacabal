@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CME Bacabal</title>
 <link rel="stylesheet" href="style/style.css">
+<style>
+    .destaque-link {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007bff; /* Cor de fundo azul */
+        color: white; /* Cor do texto */
+        text-decoration: none; /* Remove o sublinhado do link */
+        border-radius: 25px; /* Borda arredondada */
+        font-weight: bold;
+        transition: background-color 0.3s ease; /* Transição suave para o hover */
+    }
+
+    .destaque-link:hover {
+        background-color: #0056b3; /* Cor mais escura no hover */
+    }
+</style>
 </head>
 <body> 
 
@@ -13,7 +29,13 @@
     <img src="./assets/img/ícone_conselho.png" alt="Ícone do Conselho" />
     <h1>CME Bacabal</h1>
   </div>
-  <nav>
+
+  <!-- Botão do menu hamburguer -->
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+
+  <nav id="menu">
     <ul>
       <li><a href="#resolucoes">Resoluções</a></li>
       <li><a href="#acoes">Ações</a></li>
@@ -21,6 +43,7 @@
     </ul>
   </nav>
 </header>
+
 
     <main>
 <img src="./assets/img/cme.png" alt="Logo do Conselho Municipal de Educação de Bacabal">
@@ -90,7 +113,7 @@
     </ul>
 
     <ul>
-      <li><h4><a href="resolucoes.html">👉 Ver todas as Resoluções e Pareceres</a></h4></li>
+      <li><h4><a href="resolucoes.html" class="destaque-link">👉 Ver todas as Resoluções e Pareceres</a></h4></li>
     </ul>
   </div>
 </div>
@@ -110,7 +133,7 @@
   </div>
 
   <h4 style="text-align: center; margin-top: 20px;">
-    <a href="acoes.html">👉 Ver todas as ações</a>
+    <a href="acoes.html" class="destaque-link">👉 Ver todas as ações</a>
   </h4>
 </div>
 
@@ -148,6 +171,15 @@
 
 
 </body>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
+
 
 </html>
 
